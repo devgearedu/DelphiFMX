@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1E40E9E9-0A7F-4257-928B-D42583F2EEC0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Pazzle15.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\29719_rubik_s_cube_le_dev_du_jeudi_episode_7\LeDevduJeudiS3_Ep7_RubikCube.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\jweled-master\jweled-master\Jweled.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Pazzle15">
+        <MSBuild Projects="Pazzle15.dproj"/>
+    </Target>
+    <Target Name="Pazzle15:Clean">
+        <MSBuild Projects="Pazzle15.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pazzle15:Make">
+        <MSBuild Projects="Pazzle15.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LeDevduJeudiS3_Ep7_RubikCube">
+        <MSBuild Projects="..\29719_rubik_s_cube_le_dev_du_jeudi_episode_7\LeDevduJeudiS3_Ep7_RubikCube.dproj"/>
+    </Target>
+    <Target Name="LeDevduJeudiS3_Ep7_RubikCube:Clean">
+        <MSBuild Projects="..\29719_rubik_s_cube_le_dev_du_jeudi_episode_7\LeDevduJeudiS3_Ep7_RubikCube.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LeDevduJeudiS3_Ep7_RubikCube:Make">
+        <MSBuild Projects="..\29719_rubik_s_cube_le_dev_du_jeudi_episode_7\LeDevduJeudiS3_Ep7_RubikCube.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Jweled">
+        <MSBuild Projects="..\jweled-master\jweled-master\Jweled.dproj"/>
+    </Target>
+    <Target Name="Jweled:Clean">
+        <MSBuild Projects="..\jweled-master\jweled-master\Jweled.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Jweled:Make">
+        <MSBuild Projects="..\jweled-master\jweled-master\Jweled.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Pazzle15;LeDevduJeudiS3_Ep7_RubikCube;Jweled"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Pazzle15:Clean;LeDevduJeudiS3_Ep7_RubikCube:Clean;Jweled:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Pazzle15:Make;LeDevduJeudiS3_Ep7_RubikCube:Make;Jweled:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

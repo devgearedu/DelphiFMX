@@ -1,0 +1,351 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 460
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 2
+  object Left_Layout: TLayout
+    Size.Width = 145.000000000000000000
+    Size.Height = 457.000000000000000000
+    Size.PlatformDefault = False
+    object Panel1: TPanel
+      Align = Client
+      Size.Width = 145.000000000000000000
+      Size.Height = 457.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 145.000000000000000000
+        Size.Height = 457.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnClick = ListBox1Click
+        DisableFocusEffect = True
+        Items.Strings = (
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones'
+          'Mark Anderson'
+          'Mark Anderson'
+          'Paul Davis'
+          'Adam Brown'
+          'Michelle Smith'
+          'Mary Harris'
+          'Susan Sanchez'
+          'Susan Sanchez'
+          'Mary Harris'
+          'Steve Moore'
+          'Christine Jones'
+          'James Garcia'
+          'Adam Brown'
+          'Michelle Smith'
+          'Donna Martin'
+          'James Garcia'
+          'Steve Moore'
+          'Paul Davis'
+          'Donna Martin'
+          'Christine Jones')
+        DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 140.000000000000000000
+        Viewport.Height = 457.000000000000000000
+      end
+    end
+  end
+  object Right_Layout: TLayout
+    Position.X = 88.000000000000000000
+    Size.Width = 232.000000000000000000
+    Size.Height = 460.000000000000000000
+    Size.PlatformDefault = False
+    object ToolBar1: TToolBar
+      Size.Width = 232.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Action = Action1
+        Align = MostLeft
+        Enabled = True
+        ImageIndex = -1
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'detailstoolbutton'
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Action = Action2
+        Align = MostRight
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 188.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'refreshtoolbutton'
+        TabOrder = 1
+      end
+      object Label1: TLabel
+        Align = Center
+        Size.Width = 113.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        Text = #53945#51221' '#53440#51060#53952
+      end
+    end
+    object Layout2: TLayout
+      Align = Client
+      Size.Width = 232.000000000000000000
+      Size.Height = 416.000000000000000000
+      Size.PlatformDefault = False
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Size.Width = 232.000000000000000000
+        Size.Height = 416.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 232.000000000000000000
+        Viewport.Height = 416.000000000000000000
+      end
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'Bitmap1'
+        FieldType = ftBitmap
+        Generator = 'Bitmaps'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactName1'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 248
+    Top = 68
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 244
+    Top = 181
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListBox1
+      Track = True
+      FillDataSource = PrototypeBindSource1
+      FillDisplayFieldName = 'ContactName1'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'Bitmap1'
+          ControlMemberName = 'Bitmap'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object ActionList1: TActionList
+    Left = 248
+    Top = 120
+    object Action1: TAction
+      Text = 'Action1'
+      OnExecute = Action1Execute
+      OnUpdate = Action1Update
+    end
+    object Action2: TAction
+      Text = 'Action2'
+      OnExecute = Action2Execute
+    end
+  end
+end

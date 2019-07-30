@@ -1,0 +1,18 @@
+inherited Form219_NmXhdpiPh: TForm219_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited Layout1: TLayout
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited Button1: TButton
+      Size.Width = 105.000000000000000000
+    end
+    inherited Button2: TButton
+      Size.Width = 344.000000000000000000
+    end
+    inherited Button3: TButton
+      Size.Width = 336.000000000000000000
+    end
+  end
+end

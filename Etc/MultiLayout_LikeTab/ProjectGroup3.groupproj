@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F1FF301A-98A0-49EA-9C80-0EB2A8306884}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_MultiLayout_liketab.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Public\Documents\Embarcadero\Studio\14.0\Samples\Object Pascal\Mobile Samples\Media\PhotoEditorDemo\PhotoEditorDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_MultiLayout_liketab">
+        <MSBuild Projects="Project_MultiLayout_liketab.dproj"/>
+    </Target>
+    <Target Name="Project_MultiLayout_liketab:Clean">
+        <MSBuild Projects="Project_MultiLayout_liketab.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_MultiLayout_liketab:Make">
+        <MSBuild Projects="Project_MultiLayout_liketab.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PhotoEditorDemo">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\14.0\Samples\Object Pascal\Mobile Samples\Media\PhotoEditorDemo\PhotoEditorDemo.dproj"/>
+    </Target>
+    <Target Name="PhotoEditorDemo:Clean">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\14.0\Samples\Object Pascal\Mobile Samples\Media\PhotoEditorDemo\PhotoEditorDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PhotoEditorDemo:Make">
+        <MSBuild Projects="C:\Users\Public\Documents\Embarcadero\Studio\14.0\Samples\Object Pascal\Mobile Samples\Media\PhotoEditorDemo\PhotoEditorDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_MultiLayout_liketab;PhotoEditorDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_MultiLayout_liketab:Clean;PhotoEditorDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_MultiLayout_liketab:Make;PhotoEditorDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

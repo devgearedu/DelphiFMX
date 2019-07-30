@@ -1,0 +1,94 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Methods and Properties'
+  ClientHeight = 241
+  ClientWidth = 355
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object Button1: TButton
+    Position.Point = '(72,200)'
+    Width = 49.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = Button1Click
+    TabOrder = 0
+    Text = '<'
+  end
+  object Button3: TButton
+    Position.Point = '(136,200)'
+    Width = 49.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = Button3Click
+    TabOrder = 1
+    Text = '>'
+  end
+  object CheckBox1: TCheckBox
+    Position.Point = '(240,24)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 2
+    Text = 'FlippedX'
+    OnChange = CheckBox1Change
+  end
+  object CheckBox2: TCheckBox
+    Position.Point = '(240,48)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 3
+    Text = 'FlippedY'
+    OnChange = CheckBox2Change
+  end
+  object CheckBox3: TCheckBox
+    Position.Point = '(240,72)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 4
+    Text = 'Rotate 90'
+    OnChange = CheckBox3Change
+  end
+  object CheckBox4: TCheckBox
+    Position.Point = '(240,96)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 5
+    Text = 'Reverse'
+    OnChange = CheckBox4Change
+  end
+  object CheckBox5: TCheckBox
+    Position.Point = '(240,120)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 6
+    Text = 'External Timer'
+    OnChange = CheckBox5Change
+  end
+  object Sprite1: TSprite
+    Position.Point = '(40,24)'
+    Width = 177.000000000000000000
+    Height = 153.000000000000000000
+    FrameCount = 16
+    StartFrame = 0
+    EndFrame = 15
+    Reverse = False
+    FlippedX = False
+    FlippedY = False
+    Interval = 60
+    Loop = True
+  end
+  object CheckBox6: TCheckBox
+    Position.Point = '(240,144)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 8
+    Text = 'Loop'
+    OnChange = CheckBox6Change
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer1Timer
+    Left = 248
+    Top = 192
+  end
+end

@@ -1,0 +1,11 @@
+procedure TForm1.DiceRoll();
+begin
+  BaseGrid3D.Position.Y := 1.5;
+  Dummy1.Position.Vector      := Vector3D( 0,-5,0 );
+  Dummy1.RotationAngle.Vector := Vector3D( 0,0,0 );
+
+  Dummy1.AnimateFloat( 'Position.Y', 0, 1.5, TAnimationType.atOut, TInterpolationType.itBounce );
+  Dummy1.AnimateFloatDelay( 'RotationAngle.X',  90 * Random(4)+1, 0.5 );
+  Dummy1.AnimateFloatDelay( 'RotationAngle.Y',  90 * Random(4)+1, 0.5, 0.5 );
+  Dummy1.AnimateFloatDelay( 'RotationAngle.Z',  90 * Random(4)+1, 0.5, 1.0 );
+end;

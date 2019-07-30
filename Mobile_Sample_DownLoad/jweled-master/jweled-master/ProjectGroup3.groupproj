@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B10FB348-8107-4FEA-B41B-18779A1D5096}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Jweled.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\puzzle\Pazzle15.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Jweled">
+        <MSBuild Projects="Jweled.dproj"/>
+    </Target>
+    <Target Name="Jweled:Clean">
+        <MSBuild Projects="Jweled.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Jweled:Make">
+        <MSBuild Projects="Jweled.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Pazzle15">
+        <MSBuild Projects="..\..\puzzle\Pazzle15.dproj"/>
+    </Target>
+    <Target Name="Pazzle15:Clean">
+        <MSBuild Projects="..\..\puzzle\Pazzle15.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pazzle15:Make">
+        <MSBuild Projects="..\..\puzzle\Pazzle15.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Jweled;Pazzle15"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Jweled:Clean;Pazzle15:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Jweled:Make;Pazzle15:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

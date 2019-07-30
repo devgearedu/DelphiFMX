@@ -1,0 +1,33 @@
+object SplashForm: TSplashForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'Form3'
+  ClientHeight = 592
+  ClientWidth = 384
+  FormStyle = fsStayOnTop
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Label1: TLabel
+    Height = 23.000000000000000000
+    Position.X = 96.000000000000000000
+    Position.Y = 272.000000000000000000
+    Text = 'Splash Form'
+    TextAlign = taCenter
+    Width = 209.000000000000000000
+    Trimming = ttCharacter
+  end
+  object Timer1: TTimer
+    Interval = 3000
+    OnTimer = Timer1Timer
+    Left = 168
+    Top = 344
+  end
+end

@@ -1,0 +1,162 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 511
+  ClientWidth = 341
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 341.000000000000000000
+    Size.Height = 416.000000000000000000
+    Size.PlatformDefault = False
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claBlanchedalmond
+      Size.Width = 341.000000000000000000
+      Size.Height = 416.000000000000000000
+      Size.PlatformDefault = False
+      object Button1: TButton
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 24.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 81.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button1'
+        OnClick = Button1Click
+        object Rectangle2: TRectangle
+          Align = Client
+          Fill.Kind = None
+          HitTest = False
+          Size.Width = 61.000000000000000000
+          Size.Height = 61.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claBlue
+          Stroke.Thickness = 2.000000000000000000
+        end
+      end
+      object Button2: TButton
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 127.000000000000000000
+        Position.Y = 47.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Button2'
+        object Rectangle3: TRectangle
+          Align = Client
+          Fill.Kind = None
+          HitTest = False
+          Size.Width = 61.000000000000000000
+          Size.Height = 53.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claBlue
+          Stroke.Thickness = 2.000000000000000000
+        end
+      end
+      object Button3: TButton
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 231.000000000000000000
+        Position.Y = 113.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Button3'
+        object Rectangle4: TRectangle
+          Align = Client
+          Fill.Kind = None
+          HitTest = False
+          Size.Width = 77.000000000000000000
+          Size.Height = 29.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claBlue
+          Stroke.Thickness = 2.000000000000000000
+        end
+      end
+      object Button5: TButton
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 191.000000000000000000
+        Position.Y = 215.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 81.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Button5'
+        object Rectangle5: TRectangle
+          Align = Client
+          Fill.Kind = None
+          HitTest = False
+          Size.Width = 61.000000000000000000
+          Size.Height = 61.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claBlue
+          Stroke.Thickness = 2.000000000000000000
+        end
+      end
+      object FixdButton: TButton
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 32.000000000000000000
+        Position.Y = 191.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 121.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Fixd Size'
+        object Rectangle6: TRectangle
+          Align = Client
+          Fill.Kind = None
+          HitTest = False
+          Size.Width = 85.000000000000000000
+          Size.Height = 101.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claCrimson
+          Stroke.Thickness = 2.000000000000000000
+        end
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 341.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Contents
+      Size.Width = 341.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Auto Size Sample'
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 464.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 341.000000000000000000
+    Size.Height = 47.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

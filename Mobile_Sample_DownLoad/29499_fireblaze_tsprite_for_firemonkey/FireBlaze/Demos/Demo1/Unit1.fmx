@@ -1,0 +1,13 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Run time Demo'
+  ClientHeight = 467
+  ClientWidth = 749
+  Visible = False
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  Fill.Color = claBlack
+  Fill.Kind = bkSolid
+  StyleLookup = 'backgroundstyle'
+end
