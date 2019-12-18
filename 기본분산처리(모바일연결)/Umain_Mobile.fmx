@@ -1,0 +1,244 @@
+object Form169: TForm169
+  Left = 0
+  Top = 0
+  Caption = 'Form169'
+  ClientHeight = 480
+  ClientWidth = 299
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 299.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Touch.GestureManager = GestureManager1
+      Size.Width = 299.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '192.168.1.67'
+        Position.X = 16.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button1: TButton
+        Position.X = 224.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'GetCount'
+        OnClick = Button1Click
+      end
+    end
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 299.000000000000000000
+      Size.Height = 432.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 1
+      TabOrder = 1
+      TabPosition = Dots
+      Sizes = (
+        299s
+        432s
+        299s
+        432s)
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem1'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object ListView1: TListView
+          ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+          ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 299.000000000000000000
+          Size.Height = 432.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+      object TabItem2: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItem2'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object ListView2: TListView
+          ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+          ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 299.000000000000000000
+          Size.Height = 432.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b')
+    BeforeConnect = SQLConnection1BeforeConnect
+    Left = 208
+    Top = 64
+    UniqueId = '{2E188B2D-CE74-4095-A822-ECA430D060FA}'
+  end
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    SQLConnection = SQLConnection1
+    Left = 208
+    Top = 128
+  end
+  object Dept_cds: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'deptProvider'
+    RemoteServer = DSProviderConnection1
+    Left = 208
+    Top = 184
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = Dept_cds
+    ScopeMappings = <>
+    Left = 208
+    Top = 248
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 148
+    Top = 317
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'SECTION'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'CODE'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListView2
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillDisplayFieldName = 'NAME'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'PHOTO'
+          ControlMemberName = 'Bitmap'
+        end
+        item
+          SourceMemberName = 'DEPT_CODE'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object insaquery_cds: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftWideString
+        Name = 'CODE'
+        ParamType = ptInput
+        Value = 'E001'
+      end>
+    ProviderName = 'InsaQuertyProvider'
+    RemoteServer = DSProviderConnection1
+    Left = 208
+    Top = 312
+  end
+  object DataSource1: TDataSource
+    DataSet = Dept_cds
+    OnDataChange = DataSource1DataChange
+    Left = 152
+    Top = 184
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = insaquery_cds
+    ScopeMappings = <>
+    Left = 152
+    Top = 128
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 24
+    Top = 136
+    GestureData = <
+      item
+        Control = ToolBar1
+        Collection = <
+          item
+            Action = PreviousTabAction1
+            GestureID = sgiRight
+          end
+          item
+            Action = NextTabAction1
+            GestureID = sgiLeft
+          end>
+      end>
+  end
+  object ActionList1: TActionList
+    Left = 152
+    Top = 248
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+    end
+  end
+end

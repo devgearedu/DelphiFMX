@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{038EB385-4A92-4445-9BBC-DFEAC7CA6C0E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project_client.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project_Mobile_Client.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_server">
+        <MSBuild Projects="Project_server.dproj"/>
+    </Target>
+    <Target Name="Project_server:Clean">
+        <MSBuild Projects="Project_server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_server:Make">
+        <MSBuild Projects="Project_server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_client">
+        <MSBuild Projects="Project_client.dproj"/>
+    </Target>
+    <Target Name="Project_client:Clean">
+        <MSBuild Projects="Project_client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_client:Make">
+        <MSBuild Projects="Project_client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Mobile_Client">
+        <MSBuild Projects="Project_Mobile_Client.dproj"/>
+    </Target>
+    <Target Name="Project_Mobile_Client:Clean">
+        <MSBuild Projects="Project_Mobile_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Mobile_Client:Make">
+        <MSBuild Projects="Project_Mobile_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_server;Project_client;Project_Mobile_Client"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_server:Clean;Project_client:Clean;Project_Mobile_Client:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_server:Make;Project_client:Make;Project_Mobile_Client:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
