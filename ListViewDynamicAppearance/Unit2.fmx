@@ -1,0 +1,228 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 496
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    AllowSelection = False
+    ItemIndex = 0
+    Align = Client
+    Size.Width = 287.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnResize = ListView1Resize
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Image1'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 56.000000000000000000
+        Appearance.Height = 40.000000000000000000
+        Appearance.PlaceOffset.X = 2.000000000000000000
+        Appearance.PlaceOffset.Y = 2.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text2'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.WordWrap = True
+        Appearance.Trimming = Character
+        Appearance.Width = 108.000000000000000000
+        Appearance.Height = 17.000000000000000000
+        Appearance.PlaceOffset.X = 154.000000000000000000
+        Appearance.PlaceOffset.Y = 6.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text3'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 49.000000000000000000
+        Appearance.Height = 17.000000000000000000
+        Appearance.PlaceOffset.X = 62.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text4'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.StyleExt = {04040000000200000004000000}
+        Appearance.TextAlign = Trailing
+        Appearance.Trimming = Character
+        Appearance.Width = 82.000000000000000000
+        Appearance.Height = 17.000000000000000000
+        Appearance.PlaceOffset.X = 112.000000000000000000
+        Appearance.PlaceOffset.Y = 22.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.StyleExt = {00070000000000000004000000}
+        Appearance.TextAlign = Leading
+        Appearance.TextVertAlign = Leading
+        Appearance.TextColor = claBlue
+        Appearance.Width = 89.000000000000000000
+        Appearance.Height = 20.000000000000000000
+        Appearance.PlaceOffset.X = 62.000000000000000000
+        Appearance.PlaceOffset.Y = 6.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text6'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.StyleExt = {00040000000200000004000000}
+        Appearance.TextAlign = Trailing
+        Appearance.TextColor = claRed
+        Appearance.Width = 67.000000000000000000
+        Appearance.Height = 14.000000000000000000
+        Appearance.PlaceOffset.X = 194.000000000000000000
+        Appearance.PlaceOffset.Y = 24.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    ItemAppearanceObjects.FooterObjects.Text.Width = 262.000000000000000000
+    ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+    ControlType = Platform
+  end
+  object Layout1: TLayout
+    Align = Right
+    Position.X = 287.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 209.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Client
+      Size.Width = 209.000000000000000000
+      Size.Height = 414.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Viewport.Width = 205.000000000000000000
+      Viewport.Height = 410.000000000000000000
+    end
+    object Button1: TButton
+      Align = Top
+      Size.Width = 209.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Show Log'
+      OnClick = Button1Click
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 496.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Button2: TButton
+      Align = Right
+      Position.X = 452.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'searchtoolbutton'
+      TabOrder = 0
+      Text = 'Button2'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Test'
+      OnClick = Button3Click
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'ColorsName1'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactBitmap1'
+        FieldType = ftBitmap
+        Generator = 'ContactBitmaps'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactName1'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'ContactTitle1'
+        Generator = 'ContactTitles'
+        ReadOnly = False
+      end
+      item
+        Name = 'DateTimeField1'
+        Generator = 'DateTime'
+        ReadOnly = False
+      end
+      item
+        Name = 'BoolField1'
+        Generator = 'Booleans'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    Left = 448
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 340
+    Top = 133
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = PrototypeBindSource1
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'ContactBitmap1'
+          ControlMemberName = 'Image1'
+        end
+        item
+          SourceMemberName = 'ContactName1'
+          ControlMemberName = 'Text1'
+        end
+        item
+          SourceMemberName = 'ContactTitle1'
+          ControlMemberName = 'Text2'
+        end
+        item
+          SourceMemberName = 'DateTimeField1'
+          ControlMemberName = 'Text4'
+        end
+        item
+          SourceMemberName = 'ColorsName1'
+          ControlMemberName = 'Text3'
+        end
+        item
+          SourceMemberName = 'BoolField1'
+          ControlMemberName = 'Text6'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end
