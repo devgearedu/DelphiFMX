@@ -1,11 +1,86 @@
-object Form220: TForm220
+object Form6: TForm6
   Left = 0
   Top = 0
-  Caption = 'Form220'
+  Caption = 'Form6'
   ClientHeight = 480
-  ClientWidth = 259
+  ClientWidth = 291
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  DesignerMasterStyle = 0
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 291.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Size.Width = 291.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Align = MostLeft
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'cameratoolbutton'
+        TabOrder = 0
+        Text = 'Button1'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Align = Left
+        Position.X = 48.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'organizetoolbutton'
+        TabOrder = 1
+        Text = 'Button2'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Action = ShowShareSheetAction
+        Align = Right
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 243.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'actiontoolbutton'
+        TabOrder = 2
+      end
+    end
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Size.Width = 291.000000000000000000
+      Size.Height = 432.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object ActionList1: TActionList
+    Left = 232
+    Top = 88
+    object TakePhotoFromLibraryAction: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromLibraryActionDidFinishTaking
+    end
+    object TakePhotoFromCameraAction: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      OnDidFinishTaking = TakePhotoFromCameraActionDidFinishTaking
+    end
+    object ShowShareSheetAction: TShowShareSheetAction
+      Category = 'Media Library'
+      OnBeforeExecute = ShowShareSheetActionBeforeExecute
+    end
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+    end
+  end
 end

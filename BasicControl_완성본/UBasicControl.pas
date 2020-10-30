@@ -126,6 +126,7 @@ type
     procedure CheckBox4Change(Sender: TObject);
     procedure Switch1Switch(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure ColorComboBox1Change(Sender: TObject);
   private
     fViewport: TViewport3D;
     FContainer: TLayer3D;
@@ -227,6 +228,11 @@ begin
   else
      CornerButton1.Corners := CornerButton1.Corners - [TCorner.BottomLeft]
 
+end;
+
+procedure TForm28.ColorComboBox1Change(Sender: TObject);
+begin
+    ListBoxItem6.TextSettings.FontColor := ColorComboBox1.Color;
 end;
 
 procedure TForm28.DateEdit1Change(Sender: TObject);

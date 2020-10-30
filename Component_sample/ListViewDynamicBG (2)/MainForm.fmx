@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 288
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    OnUpdateObjects = ListView1UpdateObjects
+    Align = Client
+    Size.Width = 288.000000000000000000
+    Size.Height = 436.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnResized = ListView1Resized
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 121.000000000000000000
+        Appearance.Height = 44.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Image2'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.ScalingMode = Stretch
+        Appearance.Visible = False
+        Appearance.Opacity = 0.250000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text2'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 145.000000000000000000
+        Appearance.Height = 44.000000000000000000
+        Appearance.PlaceOffset.X = 120.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    ControlType = Platform
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 288.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Button2: TButton
+      Position.X = 104.000000000000000000
+      Position.Y = 2.000000000000000000
+      TabOrder = 1
+      Text = #52628#44032'2'
+      OnClick = Button2Click
+    end
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 2.000000000000000000
+      TabOrder = 0
+      Text = #52628#44032'1'
+      OnClick = Button1Click
+    end
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              002149444154384F636460F8FF9F8102C004A5C906A3068C1A0002A3060CBC01
+              0C0C00566F021E9AEF93960000000049454E44AE426082}
+            FileName = 'C:\Users\hjfac_000\Pictures\blue_16.png'
+          end>
+        Name = 'blue'
+      end
+      item
+        MultiResBitmap = <
+          item
+            Width = 16
+            Height = 16
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+              61000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              002149444154384F637C2BA3F29F8102C004A5C906A3068C1A0002A3060CBC01
+              0C0C0012CA024C55AE9E640000000049454E44AE426082}
+            FileName = 'C:\Users\hjfac_000\Pictures\red_16.png'
+          end>
+        Name = 'red'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'blue'
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'red'
+          end>
+      end>
+    Left = 144
+    Top = 296
+  end
+end

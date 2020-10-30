@@ -43,7 +43,6 @@ type
     LocationSensor1: TLocationSensor;
     MultiView1: TMultiView;
     ToolBar1: TToolBar;
-    Button1: TButton;
     ToolBar2: TToolBar;
     Button2: TButton;
     Layout1: TLayout;
