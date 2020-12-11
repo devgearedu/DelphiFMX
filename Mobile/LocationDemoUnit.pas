@@ -21,7 +21,6 @@ uses
 
 type
   TForm1 = class(TForm)
-    WebBrowser1: TWebBrowser;
     ListBox1: TListBox;
     ListBoxItem1: TListBoxItem;
     Switch1: TSwitch;
@@ -46,6 +45,7 @@ type
     ToolBar2: TToolBar;
     Button2: TButton;
     Layout1: TLayout;
+    WebBrowser1: TWebBrowser;
     procedure LocationSensor1LocationChanged(Sender: TObject; const OldLocation, NewLocation: TLocationCoord2D);
     procedure Switch1Switch(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -72,24 +72,27 @@ uses
 
 {$R *.fmx}
 procedure TForm1.Switch1Switch(Sender: TObject);
+const
+  PermissionAccessFineLocation = 'android.permission.ACCESS_FINE_LOCATION';
 begin
 {$IFDEF ANDROID}
-  if Switch1.IsChecked then
-    PermissionsService.RequestPermissions([JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION)],
-      procedure(const APermissions: TArray<string>; const AGrantResults: TArray<TPermissionStatus>)
+  PermissionsService.RequestPermissions([PermissionAccessFineLocation],
+    procedure(const APermissions: TArray<string>; const AGrantResults: TArray<TPermissionStatus>)
+    begin
+      if (Length(AGrantResults) = 1) and (AGrantResults[0] = TPermissionStatus.Granted) then
+        { activate or deactivate the location sensor }
+        LocationSensor1.Active := Switch1.IsChecked
+      else
       begin
-        if (Length(AGrantResults) = 1) and (AGrantResults[0] = TPermissionStatus.Granted) then
-          { activate or deactivate the location sensor }
-          LocationSensor1.Active := True
-        else
-        begin
-          Switch1.IsChecked := False;
-          TDialogService.ShowMessage('Location permission not granted');
-        end;
-      end)
-  else
+        Switch1.IsChecked := False;
+
+        TDialogService.ShowMessage('Location permission not granted');
+      end;
+    end);
+{$ELSE}
+  LocationSensor1.Active := Switch1.IsChecked;
 {$ENDIF}
-  LocationSensor1.Active := false;
+
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
