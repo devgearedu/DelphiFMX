@@ -1,14 +1,14 @@
-program Project_sawonList;
+program Project_SawonList;
 
 uses
   System.StartUpCopy,
   FMX.Forms,
-  UsawonList in 'UsawonList.pas' {Form129};
+  USawonList in 'UsawonList.pas' {Form1};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm129, Form129);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
